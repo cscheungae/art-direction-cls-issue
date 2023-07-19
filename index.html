@@ -1,0 +1,54 @@
+<!--
+Copyright 2018 Google LLC.
+SPDX-License-Identifier: Apache-2.0
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive Images: Art Direction</title>
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            text-align: center;
+            margin: 0px;
+        }
+
+        img {
+            border: 1px solid black;
+            width: 90vw;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Foobar Flowershop
+        </h1>
+        <p>We sell the best flowers!</p>
+    </header>
+    <picture>
+        <source media="(max-width: 600px)" srcset="flower-square.jpg" height="540" width="540">
+        <source media="(max-width: 1023px)" srcset="flower-rectangle.jpg" height="613" width="920">
+        <source media="(min-width: 1024px)" srcset="flower-large.jpg" height="1152" width="1728">
+        <!-- Work -->
+        <!-- But Ratio not right -->
+        <!-- <img src="flower-large.jpg"> -->
+        <!-- But Ratio not right -->
+        <!-- <img src="flower-large.jpg" style="aspect-ratio: auto"> -->
+        <!-- Perfect Ratio -->
+        <!-- <img src="flower-large.jpg" style="width: 100%; height: auto;"> -->
+        <!-- Work with responsive image and auto aspect-ratio -->
+        <img src="flower-large.jpg" style="width: 100%; height: auto; aspect-ratio: auto 1728 / 1152;">
+
+
+        <!-- Not Work: Image elements do not have explicit width and height -->
+        <!-- <img src="flower-large.jpg" style="width: 100%; height: auto; aspect-ratio: auto;"> -->
+    </picture>
+</body>
+
+</html>
